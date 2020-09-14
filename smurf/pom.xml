@@ -26,10 +26,19 @@ LICENSE file.
   </parent>
   
   <artifactId>smurf-binding</artifactId>
-  <name>SMURF DB Binding</name>
+  <name>SMURF Binding</name>
   <packaging>jar</packaging>
 
   <dependencies>
- 
+    
+
+    <dependency>
+      <groupId>com.yahoo.ycsb</groupId>
+      <artifactId>core</artifactId>
+      <version>${project.version}</version>
+      <scope>provided</scope>
+    </dependency>
+
+    
   </dependencies>
 </project>

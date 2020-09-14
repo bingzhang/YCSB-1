@@ -2,4 +2,6 @@
   
 rm -rf target
 mvn -e clean package -DskipTests
+#mvn -e clean package -DskipTests -Dcheckstyle.skip -X # skip checkstyle and verbose print
+
 rm -rf files
