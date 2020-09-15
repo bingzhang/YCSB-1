@@ -226,6 +226,7 @@ LICENSE file.
           </execution>
         </executions>
       </plugin>
+
     </plugins>
   </build>
 </project>
