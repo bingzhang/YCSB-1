@@ -47,7 +47,8 @@ public class SMURFClient extends DB {
   }
 
   @Override
-  public Status read(String arg0, String arg1, Set<String> arg2, Map<String, ByteIterator> arg3) {
+  public Status read(String hostname, String path, Set<String> arg2, Map<String, ByteIterator> arg3) {
+    System.out.println("hostname:" + hostname + ", path: " + path);
     return Status.OK;
   }
 

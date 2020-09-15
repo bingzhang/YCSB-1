@@ -97,6 +97,7 @@ DATABASES = {
     "solr"         : "com.yahoo.ycsb.db.solr.SolrClient",
     "solr6"        : "com.yahoo.ycsb.db.solr6.SolrClient",
     "tarantool"    : "com.yahoo.ycsb.db.TarantoolClient",
+    "smurf"        : "come.yahoo.ycsb.db.SMURFClient"
 }
 
 OPTIONS = {
