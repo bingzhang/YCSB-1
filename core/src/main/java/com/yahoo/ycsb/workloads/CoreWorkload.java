@@ -63,8 +63,18 @@ import java.util.*;
  */
 public class CoreWorkload extends Workload {
   /**
+   * The prefix name of keys.
+   */  
+  protected String prekey = "";
+  /**
+   * The prefix name of keys.
+   */
+
+  public static final String PREFIX_KEY_PROPERTY = "prekey";  
+  /**
    * The name of the database table to run queries against.
    */
+
   public static final String TABLENAME_PROPERTY = "table";
 
   /**
@@ -473,6 +483,9 @@ public class CoreWorkload extends Workload {
         INSERTION_RETRY_LIMIT, INSERTION_RETRY_LIMIT_DEFAULT));
     insertionRetryInterval = Integer.parseInt(p.getProperty(
         INSERTION_RETRY_INTERVAL, INSERTION_RETRY_INTERVAL_DEFAULT));
+    prekey = p.getProperty(
+        PREFIX_KEY_PROPERTY, "user");
+    System.out.println("PREFIX_KEY_PROPERTY: " + prekey);
   }
 
   protected String buildKeyName(long keynum) {
@@ -481,7 +494,6 @@ public class CoreWorkload extends Workload {
     }
     String value = Long.toString(keynum);
     int fill = zeropadding - value.length();
-    String prekey = "user";
     for (int i = 0; i < fill; i++) {
       prekey += '0';
     }
